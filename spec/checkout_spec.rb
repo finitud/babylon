@@ -4,7 +4,7 @@ require 'promotional_rules'
 describe 'checkout' do
 
   it 'should price 001,002,003' do
-    co = Checkout.new(PromotionalRules)
+    co = Babylon::Checkout.new(Babylon::PromotionalRules)
     co.scan("001")
     co.scan("002")
     co.scan("003")
@@ -12,7 +12,7 @@ describe 'checkout' do
   end
 
   it 'should price 001,003,001' do
-    co = Checkout.new(PromotionalRules)
+    co = Babylon::Checkout.new(Babylon::PromotionalRules)
     co.scan("001")
     co.scan("003")
     co.scan("001")
@@ -20,7 +20,7 @@ describe 'checkout' do
   end
 
   it 'should price 001,002,001,003' do
-    co = Checkout.new(PromotionalRules)
+    co = Babylon::Checkout.new(Babylon::PromotionalRules)
     co.scan("001")
     co.scan("002")
     co.scan("001")
